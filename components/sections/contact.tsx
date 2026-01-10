@@ -69,8 +69,8 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -78,35 +78,23 @@ export function Contact() {
           variants={containerVariants}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
           >
-            Let's Connect
+            Let&apos;s Connect
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            I'm always interested in new opportunities and collaborations. 
-            Feel free to reach out if you'd like to work together!
+            I&apos;m always interested in new opportunities and collaborations.
+            Feel free to reach out if you&apos;d like to work together!
           </motion.p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-background/50 backdrop-blur-sm border border-border/30 rounded-2xl p-8 relative overflow-hidden">
-            {/* Grid background only behind content */}
-            <div 
-              className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]"
-              style={{
-                backgroundImage: `
-                  linear-gradient(to right, rgb(var(--foreground)) 1px, transparent 1px),
-                  linear-gradient(to bottom, rgb(var(--foreground)) 1px, transparent 1px)
-                `,
-                backgroundSize: '40px 40px'
-              }}
-            />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+        <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div
               initial="hidden"
@@ -114,15 +102,15 @@ export function Contact() {
               viewport={{ once: true, margin: "-50px" }}
               variants={containerVariants}
             >
-              <motion.h3 
+              <motion.h3
                 variants={itemVariants}
                 className="text-2xl font-bold text-foreground mb-8"
               >
                 Get In Touch
               </motion.h3>
-              
+
               <motion.div variants={containerVariants} className="space-y-6">
-                {contactMethods.map((method, index) => {
+                {contactMethods.map((method) => {
                   const IconComponent = method.icon;
                   return (
                     <motion.div
@@ -168,15 +156,15 @@ export function Contact() {
               viewport={{ once: true, margin: "-50px" }}
               variants={containerVariants}
             >
-              <motion.h3 
+              <motion.h3
                 variants={itemVariants}
                 className="text-2xl font-bold text-foreground mb-8"
               >
                 Follow My Work
               </motion.h3>
-              
+
               <motion.div variants={containerVariants} className="space-y-6 mb-8">
-                {socialLinks.map((social, index) => {
+                {socialLinks.map((social) => {
                   const IconComponent = social.icon;
                   return (
                     <motion.a
@@ -207,7 +195,7 @@ export function Contact() {
               </motion.div>
 
               {/* Quick Contact CTA */}
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="bg-card border border-border rounded-lg p-6"
               >
@@ -215,10 +203,10 @@ export function Contact() {
                   Ready to collaborate?
                 </h4>
                 <p className="text-muted-foreground mb-4 text-sm">
-                  I'm currently open to new opportunities in software engineering 
+                  I&apos;m currently open to new opportunities in software engineering
                   and machine learning roles.
                 </p>
-                <Button 
+                <Button
                   onClick={() => window.location.href = `mailto:${personalInfo.email}`}
                   className="w-full"
                 >
@@ -227,7 +215,6 @@ export function Contact() {
                 </Button>
               </motion.div>
             </motion.div>
-            </div>
           </div>
         </div>
 
@@ -239,7 +226,7 @@ export function Contact() {
           variants={containerVariants}
           className="mt-20 pt-8 border-t border-border text-center"
         >
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-muted-foreground"
           >

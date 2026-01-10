@@ -1,16 +1,27 @@
-import { Header } from "./header";
+import { Hero } from "@/components/sections/hero";
+import { Experience } from "@/components/sections/experience";
+import { Projects } from "@/components/sections/projects";
+import { Skills } from "@/components/sections/skills";
+import { Certifications } from "@/components/sections/certifications";
+import { Contact } from "@/components/sections/contact";
+import { CursorField } from "@/components/ui/cursor-field";
+import { FloatingNav } from "@/components/layout/floating-nav";
 
-interface MainLayoutProps {
-  children: React.ReactNode;
-}
-
-export function MainLayout({ children }: MainLayoutProps) {
+export function MainLayout() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {children}
+      <main>
+        <FloatingNav />
+        <div className="relative">
+          <CursorField />
+          <div className="relative z-10">
+            <Hero />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Certifications />
+            <Contact />
+          </div>
         </div>
       </main>
     </div>

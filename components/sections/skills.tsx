@@ -2,49 +2,69 @@
 
 import { motion } from "framer-motion";
 import {
-    Code2,
-    Database,
-    Layers,
-    Wrench,
-    FileCode,
-    Brain,
-    Cpu,
-    Globe,
-    Smartphone,
-    GitBranch,
-    Terminal,
-    Zap
-} from "lucide-react";
+    SiPython,
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiExpress,
+    SiPostgresql,
+    SiWordpress,
+    SiAndroid,
+    SiGit,
+    SiPytorch,
+    SiTensorflow,
+
+    SiHtml5,
+    SiCss3,
+    SiTailwindcss,
+    SiMongodb,
+    SiDocker,
+    SiAmazonwebservices,
+} from "react-icons/si";
+import { Code2, Brain } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
 // Icon mapping for different technologies
 const getSkillIcon = (skill: string) => {
     const skillLower = skill.toLowerCase();
 
-    if (skillLower.includes('python')) return Terminal;
-    if (skillLower.includes('javascript')) return Zap;
-    if (skillLower.includes('sql')) return Database;
-    if (skillLower.includes('numpy') || skillLower.includes('pytorch')) return Brain;
-    if (skillLower.includes('react') || skillLower.includes('next')) return Layers;
-    if (skillLower.includes('express')) return Cpu;
-    if (skillLower.includes('postgres')) return Database;
-    if (skillLower.includes('wordpress')) return Globe;
-    if (skillLower.includes('mobile') || skillLower.includes('app')) return Smartphone;
-    if (skillLower.includes('git')) return GitBranch;
-    if (skillLower.includes('full-stack')) return Code2;
+    // Programming Languages
+    if (skillLower.includes('python')) return SiPython;
+    if (skillLower.includes('javascript')) return SiJavascript;
+    if (skillLower.includes('typescript')) return SiTypescript;
+    if (skillLower.includes('html')) return SiHtml5;
+    if (skillLower.includes('css')) return SiCss3;
 
-    return FileCode; // Default icon
+    // Frameworks & Libraries
+    if (skillLower.includes('react')) return SiReact;
+    if (skillLower.includes('next')) return SiNextdotjs;
+    if (skillLower.includes('node')) return SiNodedotjs;
+    if (skillLower.includes('express')) return SiExpress;
+    if (skillLower.includes('tailwind')) return SiTailwindcss;
+
+    // AI/ML
+    if (skillLower.includes('pytorch')) return SiPytorch;
+    if (skillLower.includes('tensorflow')) return SiTensorflow;
+
+    // Databases
+    if (skillLower.includes('postgres')) return SiPostgresql;
+    if (skillLower.includes('sql')) return SiPostgresql; // Default for SQL
+    if (skillLower.includes('mongo')) return SiMongodb;
+
+    // Tools & Platforms
+    if (skillLower.includes('wordpress')) return SiWordpress;
+    if (skillLower.includes('git')) return SiGit;
+    if (skillLower.includes('docker')) return SiDocker;
+    if (skillLower.includes('aws')) return SiAmazonwebservices;
+    if (skillLower.includes('android')) return SiAndroid;
+
+    // Generic fallbacks based on category if specific match fails
+    return Code2;
 };
 
-const getCategoryIcon = (category: string) => {
-    const categoryLower = category.toLowerCase();
 
-    if (categoryLower.includes('programming')) return Code2;
-    if (categoryLower.includes('libraries') || categoryLower.includes('frameworks')) return Layers;
-    if (categoryLower.includes('databases')) return Database;
-
-    return Wrench; // Default for "Other Technologies"
-};
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -67,22 +87,13 @@ const itemVariants = {
     }
 };
 
-const skillItemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 0.3
-        }
-    }
-};
+
 
 export function Skills() {
     const { skills } = portfolioData;
 
     return (
-        <section id="skills" className="py-20 bg-muted/30">
+        <section id="skills" className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial="hidden"
@@ -114,33 +125,26 @@ export function Skills() {
                 >
                     <motion.div
                         variants={itemVariants}
-                        className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+                        className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300"
                     >
-                        {/* Grid background only behind content */}
-                        <div
-                            className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]"
-                            style={{
-                                backgroundImage: `
-                                    linear-gradient(to right, rgb(var(--foreground)) 1px, transparent 1px),
-                                    linear-gradient(to bottom, rgb(var(--foreground)) 1px, transparent 1px)
-                                `,
-                                backgroundSize: '40px 40px'
-                            }}
-                        />
-                        <div className="relative z-10">
+                        <div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {skills.map((skillCategory, categoryIndex) => (
+                                {skills.map((skillCategory) => (
                                     <div key={skillCategory.category} className="space-y-4">
                                         <h3 className="text-lg font-semibold text-foreground flex items-center">
                                             <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                                             {skillCategory.category}
                                         </h3>
                                         <ul className="space-y-2">
-                                            {skillCategory.items.map((skill, skillIndex) => (
-                                                <li key={skill} className="text-muted-foreground hover:text-foreground transition-colors">
-                                                    {skill}
-                                                </li>
-                                            ))}
+                                            {skillCategory.items.map((skill) => {
+                                                const Icon = getSkillIcon(skill);
+                                                return (
+                                                    <li key={skill} className="text-muted-foreground hover:text-foreground transition-colors flex items-center">
+                                                        <Icon className="w-4 h-4 mr-2 text-primary/70" />
+                                                        {skill}
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                 ))}

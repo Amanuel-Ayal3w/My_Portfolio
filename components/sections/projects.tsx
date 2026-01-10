@@ -30,8 +30,8 @@ export function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -53,31 +53,20 @@ export function Projects() {
           </motion.p>
         </motion.div>
 
-        <div className="bg-background/50 backdrop-blur-sm border border-border/30 rounded-2xl p-8 relative overflow-hidden">
-          {/* Grid background only behind content */}
-          <div
-            className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgb(var(--foreground)) 1px, transparent 1px),
-                linear-gradient(to bottom, rgb(var(--foreground)) 1px, transparent 1px)
-              `,
-              backgroundSize: '40px 40px'
-            }}
-          />
+        <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto relative z-10"
+            className="space-y-8"
           >
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                className="bg-background border border-border rounded-lg overflow-hidden hover:shadow-md transition-all duration-300 group"
               >
                 {/* Project header */}
                 <div className="p-6 pb-4">
@@ -129,12 +118,12 @@ export function Projects() {
                   {project.achievements && project.achievements.length > 0 && (
                     <div className="space-y-2">
                       <div className="flex items-center text-sm font-medium text-foreground mb-2">
-                        <Trophy className="w-4 h-4 mr-2 text-yellow-500" />
+                        <Trophy className="w-4 h-4 mr-2 text-foreground" />
                         Key Achievements
                       </div>
                       {project.achievements.map((achievement, achIndex) => (
                         <div key={achIndex} className="flex items-start text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-foreground rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           {achievement}
                         </div>
                       ))}
