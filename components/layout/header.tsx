@@ -22,17 +22,17 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
-      
+
       // Detect active section
       const sections = navigation.map(nav => nav.href.substring(1));
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetBottom = offsetTop + element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(section);
             break;
@@ -56,7 +56,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 md:hidden",
         isScrolled
           ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-background/10"
           : "bg-background/20 backdrop-blur-sm"
@@ -105,7 +105,7 @@ export function Header() {
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-2">
             <ThemeToggle />
-            
+
             {/* Mobile menu button */}
             <Button
               variant="ghost"

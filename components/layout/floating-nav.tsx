@@ -32,7 +32,7 @@ export function FloatingNav() {
     };
 
     return (
-        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50">
+        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:block">
             <motion.div
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
