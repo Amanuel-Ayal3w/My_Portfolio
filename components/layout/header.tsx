@@ -68,9 +68,14 @@ export function Header() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("#about")}
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 group"
             >
-              Amanuel Ayalew
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-bold text-lg shadow-md group-hover:scale-105 transition-transform duration-300">
+                AA
+              </div>
+              <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors hidden sm:block">
+                Amanuel Ayalew
+              </span>
             </button>
           </div>
 
