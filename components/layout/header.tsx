@@ -152,6 +152,14 @@ export function Header() {
                   </button>
                 );
               })}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left px-3 py-2 text-base font-bold rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-300"
+              >
+                Resume
+              </a>
             </div>
           </div>
         )}

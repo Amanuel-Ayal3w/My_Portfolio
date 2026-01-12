@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Briefcase, Code, Terminal, Mail } from "lucide-react";
+import { User, Briefcase, Code, Terminal, Mail, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
     { icon: Code, label: "Projects", href: "#projects" },
     { icon: Terminal, label: "Skills", href: "#skills" },
     { icon: Mail, label: "Contact", href: "#contact" },
+    { icon: FileText, label: "Resume", href: "/resume.pdf" },
 ];
 
 export function FloatingNav() {
@@ -47,7 +48,13 @@ export function FloatingNav() {
                         <a
                             key={item.label}
                             href={item.href}
-                            onClick={(e) => scrollToSection(e, item.href)}
+                            onClick={(e) => {
+                                if (item.href.startsWith("#")) {
+                                    scrollToSection(e, item.href);
+                                }
+                            }}
+                            target={item.href.startsWith("#") ? "_self" : "_blank"}
+                            rel={item.href.startsWith("#") ? "" : "noopener noreferrer"}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                             className="relative p-3 rounded-full hover:bg-muted/50 transition-colors group"
