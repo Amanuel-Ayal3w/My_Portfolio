@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Nav } from "@/components/layout/nav";
 import { ProjectCard } from "@/components/ui/project-card";
@@ -14,9 +15,12 @@ export default function Home() {
       <main className="max-w-xl mx-auto px-4 py-8 space-y-12">
         {/* Intro */}
         <section>
-          <h1 className="text-xl font-medium text-foreground mb-4">
-            Hi, I&apos;m {personalInfo.name} 👋
-          </h1>
+          <div className="flex items-center justify-between gap-4 mb-4">
+            <h1 className="text-xl font-medium text-foreground">
+              Hi, I&apos;m {personalInfo.name} 👋
+            </h1>
+          
+          </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {personalInfo.summary}
           </p>
