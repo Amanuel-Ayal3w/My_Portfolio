@@ -17,7 +17,7 @@ export const portfolioData: PortfolioData = {
       id: "icog-labs",
       company: "iCog Labs",
       position: "Machine Learning Engineer Intern",
-      duration: "July 2024 - Present",
+      duration: "July 2024 - March 2026",
       description: [
         "Working on machine learning projects and AI research initiatives",
         "Developing and implementing ML models for real-world applications",
@@ -53,15 +53,39 @@ export const portfolioData: PortfolioData = {
 
   projects: [
     {
-      id: "r-master",
-      title: "R Master",
-      description: "A2SV Hackathon project that automated the recruitment process using AI. This innovative solution streamlined hiring workflows and improved candidate matching efficiency.",
-      technologies: ["AI", "Machine Learning", "Python", "Automation"],
-      achievements: [
-        "Finalist project for the 2023 A2SV Generative AI for Africa Hackathon",
-        "Developed with team collaboration",
-        "Automated recruitment process using AI"
-      ]
+      id: "gpt-transformer",
+      title: "GPT-Style Conversational AI",
+      description: "A decoder-only transformer (GPT-style) built from scratch in PyTorch, trained on 3,690+ question–answer pairs to generate ChatGPT-like responses. Includes a custom tokenizer, dataset pipeline, training loop, and an interactive chat interface — runs locally on 8GB RAM.",
+      technologies: ["Python", "PyTorch"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/pytorch-Transformer-implementataion-"
+    },
+    {
+      id: "quantum-vqc",
+      title: "Quantum Heart-Disease Classifier (VQC)",
+      description: "A variational quantum classifier for binary heart-disease prediction on the UCI Cleveland dataset. Uses 4-qubit angle encoding and a 3-layer variational ansatz with CNOT entanglers, integrating the quantum circuit into PyTorch via PennyLane's TorchLayer.",
+      technologies: ["Python", "PennyLane", "PyTorch"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/Quantum_ML_iCog"
+    },
+    {
+      id: "mobilevit",
+      title: "MobileViT Benchmarking",
+      description: "Implementation and benchmarking of the MobileViT family (XXS/XS/S) — hybrid CNN + vision-transformer models for efficient image classification — against a ResNet-50 baseline, measuring parameters, FLOPs, latency, and throughput.",
+      technologies: ["Python", "PyTorch"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/mobile_ViT"
+    },
+    {
+      id: "predictive-coding",
+      title: "Predictive Coding Network",
+      description: "An implementation of predictive coding networks — a biologically inspired alternative to backpropagation — trained on MNIST, with visualizations of prediction errors and training curves. Built with NGC-Learn.",
+      technologies: ["Python", "NGC-Learn"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/Predictive-coding-"
+    },
+    {
+      id: "etb-usd",
+      title: "ETB/USD Exchange Rate Prediction",
+      description: "A linear regression model that predicts the Ethiopian Birr to US Dollar exchange rate from historical data, developed and visualized in a Jupyter notebook.",
+      technologies: ["Python", "Jupyter", "scikit-learn"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/Predicting_Ethiopian_Birr_to_USD_Exchange_Rate_using_Linear_Regression-"
     }
   ],
 
