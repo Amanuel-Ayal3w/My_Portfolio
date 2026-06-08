@@ -15,7 +15,11 @@ import {
     SiGit,
     SiPytorch,
     SiTensorflow,
-
+    SiScikitlearn,
+    SiPandas,
+    SiNumpy,
+    SiApacheairflow,
+    SiLinux,
     SiHtml5,
     SiCss3,
     SiTailwindcss,
@@ -47,6 +51,11 @@ const getSkillIcon = (skill: string) => {
     // AI/ML
     if (skillLower.includes('pytorch')) return SiPytorch;
     if (skillLower.includes('tensorflow')) return SiTensorflow;
+    if (skillLower.includes('scikit')) return SiScikitlearn;
+    if (skillLower.includes('pandas')) return SiPandas;
+    if (skillLower.includes('numpy')) return SiNumpy;
+    if (skillLower.includes('airflow')) return SiApacheairflow;
+    if (skillLower.includes('linux')) return SiLinux;
 
     // Databases
     if (skillLower.includes('postgres')) return SiPostgresql;
@@ -128,7 +137,7 @@ export function Skills() {
                         className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300"
                     >
                         <div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {skills.map((skillCategory) => (
                                     <div key={skillCategory.category} className="space-y-4">
                                         <h3 className="text-lg font-semibold text-foreground flex items-center">

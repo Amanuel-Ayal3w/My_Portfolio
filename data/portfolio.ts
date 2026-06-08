@@ -92,15 +92,19 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Programming",
-      items: ["Python", "JavaScript", "SQL"]
+      items: ["Python", "TypeScript"]
     },
     {
-      category: "Frameworks",
-      items: ["React", "Next.js", "PyTorch", "TensorFlow", "Express.js", "Node.js"]
+      category: "Machine Learning & Data",
+      items: ["PyTorch", "scikit-learn", "pandas", "NumPy"]
     },
     {
-      category: "Tools",
-      items: ["Git", "PostgreSQL", "WordPress"]
+      category: "Backend & Data Engineering",
+      items: ["REST APIs", "PostgreSQL", "SQL", "Airflow"]
+    },
+    {
+      category: "Tools & Technologies",
+      items: ["Git", "Linux", "Node.js"]
     }
   ],
 

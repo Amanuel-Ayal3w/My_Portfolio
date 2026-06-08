@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { portfolioData } from "@/data/portfolio";
 
 export default function Home() {
-  const { personalInfo, experience, projects } = portfolioData;
+  const { personalInfo, experience, projects, skills } = portfolioData;
   const recentExperience = experience.slice(0, 2);
   const recentProjects = projects.slice(0, 3);
 
@@ -100,6 +100,25 @@ export default function Home() {
               </div>
               <span className="text-xs text-muted-foreground whitespace-nowrap flex-shrink-0">2021 – 2026</span>
             </div>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section>
+          <h2 className="text-sm font-medium text-foreground mb-4">Skills</h2>
+          <div className="space-y-3">
+            {skills.map((skillCategory) => (
+              <div key={skillCategory.category} className="bg-card rounded-lg p-4 border border-border">
+                <p className="text-xs font-medium text-muted-foreground mb-2">{skillCategory.category}</p>
+                <div className="flex flex-wrap gap-2">
+                  {skillCategory.items.map((skill) => (
+                    <span key={skill} className="text-xs px-2 py-1 rounded-md bg-muted text-foreground">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
