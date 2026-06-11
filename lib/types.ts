@@ -26,6 +26,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   achievements?: string[];
+  images?: string[];
 }
 
 export interface Skill {

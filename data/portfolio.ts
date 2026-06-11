@@ -53,6 +53,33 @@ export const portfolioData: PortfolioData = {
 
   projects: [
     {
+      id: "awaqi",
+      title: "Awaqi — Bilingual AI Tax Assistant",
+      description: "A bilingual (Amharic & English) AI support assistant for the Ethiopian Revenue Authority that answers taxpayer questions with grounded, cited answers pulled from official tax proclamations and directives.",
+      technologies: ["Python", "RAG", "pgvector", "PostgreSQL", "Gemini", "Telegram Bot API"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/Awaqi",
+      images: [
+        "/images/Awaqi1.png",
+        "/images/Awaqi2.png",
+        "/images/Awaqi3.png",
+        "/images/Awqi4.png",
+        "/images/Awaqi5.png",
+        "/images/Awaqi6.png",
+        "/images/Awqai7.png",
+        "/images/Awaqi8.png",
+        "/images/Awaqi9.png",
+        "/images/Awaqi10.png"
+      ],
+      achievements: [
+        "Hybrid RAG pipeline combining dense vector search (pgvector embeddings) with keyword full-text search, fusing results via Reciprocal Rank Fusion (RRF) to keep answers grounded instead of hallucinated",
+        "Every response carries source citations and a confidence score, traced back to the originating proclamation or directive",
+        "Agentic \"Awaqi Max\" mode — a ReAct agent built on Gemini function calling that reasons across multiple tools, querying both the internal knowledge base and live Ethiopian web search for harder, multi-step questions",
+        "Automated ingestion pipeline handling PDF/HTML extraction, OCR, chunking, and embedding, kept current via scheduled scrapers and admin document uploads",
+        "Multi-channel delivery over a web chat interface and a Telegram bot, plus an admin dashboard for managing documents and notifications",
+        "Evaluation framework that benchmarks answer quality across the knowledge base"
+      ]
+    },
+    {
       id: "gpt-transformer",
       title: "GPT-Style Conversational AI",
       description: "A decoder-only transformer (GPT-style) built from scratch in PyTorch, trained on 3,690+ question–answer pairs to generate ChatGPT-like responses. Includes a custom tokenizer, dataset pipeline, training loop, and an interactive chat interface — runs locally on 8GB RAM.",

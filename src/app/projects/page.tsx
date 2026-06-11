@@ -24,6 +24,8 @@ export default function ProjectsPage() {
               key={project.id}
               title={project.title}
               description={project.description}
+              achievements={project.achievements}
+              images={project.images}
               githubUrl={project.githubUrl}
               liveUrl={project.liveUrl}
             />
