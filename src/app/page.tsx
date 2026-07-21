@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaTelegram, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Nav } from "@/components/layout/nav";
 import { ProjectCard } from "@/components/ui/project-card";
 import { portfolioData } from "@/data/portfolio";
@@ -28,14 +29,22 @@ export default function Home() {
             I&apos;m passionate about AI, machine learning, and building things that
             solve real problems.
           </p>
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-3d mt-5 inline-flex items-center gap-2 rounded-sm border border-foreground bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-background hover:text-foreground"
-          >
-            Download Resume
-          </a>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-3d inline-flex items-center gap-2 rounded-sm border border-foreground bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-background hover:text-foreground"
+            >
+              Download Resume
+            </a>
+            <a
+              href="#connect"
+              className="btn-3d inline-flex items-center gap-2 rounded-sm border border-foreground bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
+            >
+              Let&apos;s Connect
+            </a>
+          </div>
         </section>
 
         {/* Work Experience preview */}
@@ -140,36 +149,50 @@ export default function Home() {
         </section>
 
         {/* Let's Connect */}
-        <section className="border-t border-border pt-10">
+        <section id="connect" className="border-t border-border pt-10 scroll-mt-8">
           <h2 className="text-sm font-medium text-foreground mb-2">Let&apos;s Connect</h2>
           <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
             If you want to get in touch about something or just to say hi, feel free
             to reach out on social media or send me an email.
           </p>
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
+              aria-label="GitHub"
+              title="GitHub"
+              className="hover:text-foreground hover:-translate-y-0.5 transition-all"
             >
-              github
+              <FaGithub className="w-7 h-7" />
             </a>
-            <span>/</span>
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              className="hover:text-foreground hover:-translate-y-0.5 transition-all"
             >
-              linkedin
+              <FaLinkedin className="w-7 h-7" />
             </a>
-            <span>/</span>
+            <a
+              href={personalInfo.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              title="Telegram"
+              className="hover:text-foreground hover:-translate-y-0.5 transition-all"
+            >
+              <FaTelegram className="w-7 h-7" />
+            </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
+              aria-label={`Email ${personalInfo.email}`}
+              title={personalInfo.email}
+              className="hover:text-foreground hover:-translate-y-0.5 transition-all"
             >
-              {personalInfo.email}
+              <FaEnvelope className="w-7 h-7" />
             </a>
           </div>
         </section>

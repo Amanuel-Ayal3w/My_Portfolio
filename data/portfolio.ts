@@ -9,6 +9,7 @@ export const portfolioData: PortfolioData = {
     phone: "+251983742880",
     linkedin: "https://www.linkedin.com/in/amanuel-ayalew/",
     github: "https://github.com/Amanuel-Ayal3w",
+    telegram: "https://t.me/ammanuel_ayalew",
     summary: "Full-stack developer and machine learning engineer. I build end-to-end web applications with React, Next.js, and Node.js, and design ML systems that put AI to work solving real problems. Hardworking, curious, and always eager to learn more."
   },
 
