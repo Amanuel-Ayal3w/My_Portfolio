@@ -1,4 +1,5 @@
 import { Nav } from "@/components/layout/nav";
+import { Connect } from "@/components/sections/connect";
 import { portfolioData } from "@/data/portfolio";
 
 export const metadata = {
@@ -100,38 +101,7 @@ export default function WorkPage() {
         </section>
 
         {/* Connect */}
-        <section className="pt-8 border-t border-border">
-          <h2 className="text-sm font-medium text-foreground mb-2">Let&apos;s Connect</h2>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            Feel free to reach out about opportunities, collaborations, or just to say hi.
-          </p>
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
-            >
-              github
-            </a>
-            <span>/</span>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
-            >
-              linkedin
-            </a>
-            <span>/</span>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="hover:text-foreground hover:underline underline-offset-2 transition-colors"
-            >
-              {personalInfo.email}
-            </a>
-          </div>
-        </section>
+        <Connect description="Feel free to reach out about opportunities, collaborations, or just to say hi." />
       </main>
 
       <footer className="max-w-xl mx-auto px-4 py-10 text-center">

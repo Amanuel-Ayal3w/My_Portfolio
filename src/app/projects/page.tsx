@@ -1,4 +1,5 @@
 import { Nav } from "@/components/layout/nav";
+import { Connect } from "@/components/sections/connect";
 import { ProjectCard } from "@/components/ui/project-card";
 import { portfolioData } from "@/data/portfolio";
 
@@ -30,6 +31,11 @@ export default function ProjectsPage() {
               liveUrl={project.liveUrl}
             />
           ))}
+        </div>
+
+        {/* Connect */}
+        <div className="mt-12">
+          <Connect description="Interested in working together or have a question about a project? Let's talk." />
         </div>
       </main>
 
