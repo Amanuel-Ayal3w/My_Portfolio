@@ -15,36 +15,27 @@ export default function Home() {
       <main className="max-w-xl mx-auto px-4 py-8 space-y-12">
         {/* Intro */}
         <section>
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <h1 className="text-xl font-medium text-foreground">
-              Hi, I&apos;m {personalInfo.name} 👋
+          <div className="mb-6">
+            <h1 className="font-display font-medium uppercase leading-[0.85] tracking-[-0.02em] text-[clamp(2.5rem,11vw,3.9rem)]">
+              <span className="block text-foreground">Hi, I&apos;m</span>
+              <span className="block text-outline">{personalInfo.name}</span>
             </h1>
-          
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {personalInfo.summary}
           </p>
           <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
             I&apos;m passionate about AI, machine learning, and building things that
-            solve real problems. Feel free to explore my{" "}
-            <Link href="/work" className="text-foreground underline underline-offset-2 hover:opacity-70 transition-opacity">
-              work experience
-            </Link>{" "}
-            and{" "}
-            <Link href="/projects" className="text-foreground underline underline-offset-2 hover:opacity-70 transition-opacity">
-              projects
-            </Link>
-            , or download my{" "}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground underline underline-offset-2 hover:opacity-70 transition-opacity"
-            >
-              Resume
-            </a>
-            .
+            solve real problems.
           </p>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-3d mt-5 inline-flex items-center gap-2 rounded-sm border border-foreground bg-foreground px-4 py-2 text-sm font-medium text-background hover:bg-background hover:text-foreground"
+          >
+            Download Resume
+          </a>
         </section>
 
         {/* Work Experience preview */}

@@ -3,13 +3,13 @@ import { PortfolioData } from '@/lib/types';
 export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Amanuel Ayalew",
-    title: "Software Engineer & ML Enthusiast",
+    title: "Full-Stack Developer & ML Engineer",
     location: "Addis Ababa, Ethiopia",
     email: "amanuelayalew983@gmail.com",
     phone: "+251983742880",
     linkedin: "https://www.linkedin.com/in/amanuel-ayalew/",
     github: "https://github.com/Amanuel-Ayal3w",
-    summary: "Software Engineer with a strong interest in machine learning. Passionate about exploring AI technologies and always eager to learn more. Hardworking and dedicated to applying my skills to real-world problems."
+    summary: "Full-stack developer and machine learning engineer. I build end-to-end web applications with React, Next.js, and Node.js, and design ML systems that put AI to work solving real problems. Hardworking, curious, and always eager to learn more."
   },
 
   experience: [

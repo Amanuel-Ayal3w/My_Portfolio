@@ -113,7 +113,7 @@ export function Skills() {
                 >
                     <motion.h2
                         variants={itemVariants}
-                        className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
+                        className="font-display font-black tracking-[-0.03em] text-4xl sm:text-5xl uppercase leading-none text-foreground mb-4"
                     >
                         Skills & Technologies
                     </motion.h2>

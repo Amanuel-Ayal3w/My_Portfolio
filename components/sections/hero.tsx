@@ -26,7 +26,7 @@ export function Hero() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
-                    className="bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-sm"
+                    className="bg-card border border-border rounded-sm p-8 lg:p-12"
                 >
                     <div className="grid grid-cols-1 gap-12 items-center">
                         {/* Content */}
@@ -42,16 +42,18 @@ export function Hero() {
                                 transition={{ duration: 0.5, delay: 0.1 }}
                                 className="mb-6"
                             >
-                                <p className="text-sm font-medium text-primary mb-2 tracking-wide uppercase">
-                                    Welcome to my portfolio
+                                <p className="text-xs font-mono font-medium text-muted-foreground mb-2 tracking-[0.2em] uppercase">
+                                    — Drawing No. 001 — Welcome to my portfolio
                                 </p>
-                                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-                                    Hi, I&apos;m{" "}
-                                    <span className="text-primary">
+                                <h1 className="mb-4 font-sans font-black uppercase leading-[0.88] tracking-[-0.03em] text-5xl sm:text-6xl lg:text-7xl">
+                                    <span className="block text-foreground">
+                                        Hi, I&apos;m
+                                    </span>
+                                    <span className="block text-outline">
                                         {personalInfo.name}
                                     </span>
                                 </h1>
-                                <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-muted-foreground mb-6">
+                                <h2 className="font-display font-bold text-lg sm:text-xl lg:text-2xl uppercase tracking-[0.02em] text-muted-foreground mb-6">
                                     {personalInfo.title}
                                 </h2>
                             </motion.div>
@@ -97,7 +99,7 @@ export function Hero() {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                                 className="mt-8 text-sm text-muted-foreground"
                             >
-                                📍 {personalInfo.location}
+                                {personalInfo.location}
                             </motion.div>
                         </motion.div>
 

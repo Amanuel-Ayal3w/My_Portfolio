@@ -19,21 +19,19 @@ export function Nav() {
         <Link href="/" className="text-sm text-foreground hover:underline">
           Amanuel Ayalew
         </Link>
-        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-          {navLinks.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-1">
-              {i > 0 && <span>/</span>}
-              <Link
-                href={link.href}
-                className={
-                  pathname === link.href
-                    ? "text-foreground underline underline-offset-2"
-                    : "hover:text-foreground transition-colors"
-                }
-              >
-                {link.label}
-              </Link>
-            </span>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={
+                pathname === link.href
+                  ? "btn-3d rounded-sm border border-foreground bg-transparent px-3 py-1 text-foreground"
+                  : "btn-3d rounded-sm border border-border bg-transparent px-3 py-1 hover:border-foreground hover:text-foreground"
+              }
+            >
+              {link.label}
+            </Link>
           ))}
           <span className="ml-2">
             <ThemeToggle />
