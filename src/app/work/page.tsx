@@ -22,15 +22,10 @@ export default function WorkPage() {
           </p>
           <div className="space-y-3">
             {experience.map((exp) => {
-              const isCurrent = exp.duration.toLowerCase().includes("present");
               return (
                 <div
                   key={exp.id}
-                  className={`bg-card rounded-lg p-5 border transition-colors hover:bg-accent/20 ${
-                    isCurrent
-                      ? "border-border border-l-2 border-l-foreground"
-                      : "border-border"
-                  }`}
+                  className="bg-card rounded-lg p-5 border border-border transition-colors hover:bg-accent/20"
                 >
                   {/* Header row */}
                   <div className="flex items-start justify-between gap-3 mb-3">
@@ -44,12 +39,6 @@ export default function WorkPage() {
                       <span className="text-xs text-muted-foreground whitespace-nowrap">
                         {exp.duration}
                       </span>
-                      {isCurrent && (
-                        <span className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 rounded-full bg-muted text-foreground font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
-                          Current
-                        </span>
-                      )}
                     </div>
                   </div>
 
