@@ -15,6 +15,17 @@ export const portfolioData: PortfolioData = {
 
   experience: [
     {
+      id: "exploree-solutions",
+      company: "Exploree Solutions",
+      position: "Software Engineer",
+      duration: "July 2026 - Present",
+      description: [
+        "Developed job matching algorithms and integrated AI/ML capabilities into existing systems",
+        "Focused on intelligent matching, data processing, and automation"
+      ],
+      technologies: ["TypeScript", "FastAPI", "Python", "Machine Learning", "PostgreSQL"]
+    },
+    {
       id: "icog-labs",
       company: "iCog Labs",
       position: "Machine Learning Engineer Intern",
