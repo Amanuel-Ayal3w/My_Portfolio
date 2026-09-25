@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Amanuel Ayalew - Software Engineer & ML Enthusiast",
   description: "Portfolio of Amanuel Ayalew, Software Engineer with expertise in machine learning, full-stack development, and AI technologies.",
-  keywords: ["Software Engineer", "Machine Learning", "AI", "Full-stack Developer", "Python", "React", "Next.js"],
+  keywords: ["Software Engineer", "Machine Learning", "AI", "Python", "Go", "FastAPI", "Next.js"],
   authors: [{ name: "Amanuel Ayalew" }],
   creator: "Amanuel Ayalew",
 };

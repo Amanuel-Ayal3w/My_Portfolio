@@ -26,6 +26,9 @@ import {
     SiMongodb,
     SiDocker,
     SiAmazonwebservices,
+    SiGo,
+    SiFastapi,
+    SiGraphql,
 } from "react-icons/si";
 import { Code2, Brain } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
@@ -38,6 +41,7 @@ const getSkillIcon = (skill: string) => {
     if (skillLower.includes('python')) return SiPython;
     if (skillLower.includes('javascript')) return SiJavascript;
     if (skillLower.includes('typescript')) return SiTypescript;
+    if (skillLower === 'go' || skillLower.includes('golang')) return SiGo;
     if (skillLower.includes('html')) return SiHtml5;
     if (skillLower.includes('css')) return SiCss3;
 
@@ -46,6 +50,8 @@ const getSkillIcon = (skill: string) => {
     if (skillLower.includes('next')) return SiNextdotjs;
     if (skillLower.includes('node')) return SiNodedotjs;
     if (skillLower.includes('express')) return SiExpress;
+    if (skillLower.includes('fastapi')) return SiFastapi;
+    if (skillLower.includes('graphql')) return SiGraphql;
     if (skillLower.includes('tailwind')) return SiTailwindcss;
 
     // AI/ML
@@ -137,7 +143,7 @@ export function Skills() {
                         className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300"
                     >
                         <div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {skills.map((skillCategory) => (
                                     <div key={skillCategory.category} className="space-y-4">
                                         <h3 className="text-lg font-semibold text-foreground flex items-center">

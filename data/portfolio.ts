@@ -3,63 +3,61 @@ import { PortfolioData } from '@/lib/types';
 export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Amanuel Ayalew",
-    title: "Full-Stack Developer & ML Engineer",
+    title: "Software Engineer",
     location: "Addis Ababa, Ethiopia",
-    email: "amanuelayalew983@gmail.com",
-    phone: "+251983742880",
+    email: "amanuel.ayalew.et@gmail.com",
+    phone: "+251 983 742 880",
     linkedin: "https://www.linkedin.com/in/amanuel-ayalew/",
     github: "https://github.com/Amanuel-Ayal3w",
     telegram: "https://t.me/ammanuel_ayalew",
-    summary: "Full-stack developer and machine learning engineer. I build end-to-end web applications with React, Next.js, and Node.js, and design ML systems that put AI to work solving real problems. Hardworking, curious, and always eager to learn more."
+    summary: "Software Engineer with experience in backend systems and growing expertise in Machine Learning, with a focus on research-driven development. I build and improve scalable applications, and I'm skilled in experimentation, performance analysis, and exploring new approaches to model design. Passionate about applying machine learning systems to solve real-world, data-driven problems."
   },
 
   experience: [
     {
       id: "exploree-solutions",
       company: "Exploree Solutions",
-      position: "Software Engineer",
+      position: "Software Engineer (Part-time)",
       duration: "July 2026 - Present",
       description: [
-        "Developed job matching algorithms and integrated AI/ML capabilities into existing systems",
-        "Focused on intelligent matching, data processing, and automation"
+        "Developed job matching algorithms and integrated AI/ML capabilities into existing systems, focusing on intelligent matching, data processing, and automation"
       ],
-      technologies: ["TypeScript", "FastAPI", "Python", "Machine Learning", "PostgreSQL"]
+      technologies: ["Go", "FastAPI", "Python", "Machine Learning"]
+    },
+    {
+      id: "gheero",
+      company: "gheero",
+      position: "AI / ML Resident",
+      duration: "August 2026 - September 2026",
+      description: [
+        "Worked on dynamic pricing models that adjusted prices based on demand and market conditions",
+        "Applied reinforcement learning for Amharic tokenization"
+      ],
+      technologies: ["Python", "Reinforcement Learning", "Machine Learning"]
     },
     {
       id: "icog-labs",
       company: "iCog Labs",
       position: "Machine Learning Engineer Intern",
-      duration: "July 2024 - March 2026",
+      duration: "July 2025 - March 2026",
       description: [
-        "Working on machine learning projects and AI research initiatives",
-        "Developing and implementing ML models for real-world applications",
-        "Collaborating with research team on cutting-edge AI technologies"
+        "Conducted research on predictive coding–based transformer architectures as biologically inspired alternatives to backpropagation",
+        "Worked on a tag recommendation model for the Mindplex platform, improving recommendation accuracy by 30% through evaluation of learning efficiency and model behavior",
+        "Experimented with Quantum Variational Circuits (QVC), reducing model parameter count by 80% while maintaining performance"
       ],
-      technologies: ["Python", "PyTorch", "Machine Learning", "AI Research"]
+      technologies: ["Python", "PyTorch", "TensorFlow", "Machine Learning"]
     },
     {
       id: "alet-systems",
       company: "Alet Systems",
       position: "Software Engineer",
-      duration: "April 2024 - December 2024",
+      duration: "May 2024 - December 2024",
       description: [
-        "Fixed and tested backend systems to ensure optimal performance",
-        "Worked on the company's Android app, adding new functionalities and ensuring smooth operation",
-        "Gained experience in full-stack development and mobile application maintenance"
+        "Tested and validated backend APIs to ensure system reliability and performance",
+        "Debugged and resolved production-level issues in backend systems, cutting response/resolution time by 40%",
+        "Supported full-stack and mobile application maintenance, including identifying and resolving issues and validating features"
       ],
-      technologies: ["Backend Development", "Android", "Full-stack Development", "Mobile Apps"]
-    },
-    {
-      id: "dm-trading",
-      company: "D&M Trading",
-      position: "Intern Software Engineer",
-      duration: "June 2022 - August 2022",
-      description: [
-        "Assisted in developing and maintaining the company's website and internal tools using Python",
-        "Built internal tools for data visualization and reporting",
-        "Developed custom WordPress themes to improve functionality and user experience"
-      ],
-      technologies: ["Python", "WordPress", "Data Visualization", "Web Development"]
+      technologies: ["TypeScript", "Next.js"]
     }
   ],
 
@@ -131,7 +129,7 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Programming",
-      items: ["Python", "TypeScript"]
+      items: ["Python", "TypeScript", "JavaScript", "Go"]
     },
     {
       category: "Machine Learning & Data",
@@ -139,11 +137,15 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Backend & Data Engineering",
-      items: ["REST APIs", "PostgreSQL", "SQL", "Airflow"]
+      items: ["REST APIs", "FastAPI", "Node.js", "Express.js", "PostgreSQL", "SQL", "Airflow", "GraphQL"]
+    },
+    {
+      category: "Frontend",
+      items: ["Next.js"]
     },
     {
       category: "Tools & Technologies",
-      items: ["Git", "Linux", "Node.js"]
+      items: ["Git", "Linux"]
     }
   ],
 
@@ -176,7 +178,7 @@ export const portfolioData: PortfolioData = {
 
   education: {
     degree: "Bachelor of Science in Software Engineering",
-    institution: "Addis Ababa University",
+    institution: "Addis Ababa University (AAiT)",
     duration: "2021 - 2026"
   }
 };
