@@ -26,7 +26,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "gheero",
-      company: "gheero",
+      company: "Gheero",
       position: "AI / ML Resident",
       duration: "August 2026 - September 2026",
       description: [
@@ -50,7 +50,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "alet-systems",
       company: "Alet Systems",
-      position: "Software Engineer",
+      position: "QA Engineer",
       duration: "May 2024 - December 2024",
       description: [
         "Tested and validated backend APIs to ensure system reliability and performance",

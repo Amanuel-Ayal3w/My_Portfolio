@@ -41,7 +41,7 @@ const defaultExperience = [
   {
     id: "alet-systems",
     company: "Alet Systems",
-    position: "Software Engineer",
+    position: "QA Engineer",
     duration: "April 2024 - December 2024",
     description: [
       "Fixed and tested backend systems to ensure optimal performance",
