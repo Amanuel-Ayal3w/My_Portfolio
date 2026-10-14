@@ -71,6 +71,7 @@ export const portfolioData: PortfolioData = {
       title: "Sift — AI Lead Qualification SaaS",
       description: "A multi-tenant AI agent that scores, enriches, and drafts replies to inbound leads in real time. Built with a NestJS and GraphQL backend, a FastAPI agent service, and a Next.js frontend on PostgreSQL, with Redis and BullMQ handling scoring and enrichment jobs.",
       technologies: ["NestJS", "GraphQL", "FastAPI", "Next.js", "PostgreSQL", "Redis", "BullMQ"],
+      githubUrl: "https://github.com/Amanuel-Ayal3w/Sift",
       images: [
         "/images/Sift1.png",
         "/images/Sift2.png",
