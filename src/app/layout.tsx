@@ -22,8 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amanuel Ayalew - Software Engineer & ML Enthusiast",
-  description: "Portfolio of Amanuel Ayalew, Software Engineer with expertise in machine learning, full-stack development, and AI technologies.",
+  title: "Amanuel Ayalew — Software Engineer",
+  description: "Software Engineer with experience in backend systems and machine learning. Portfolio of Amanuel Ayalew.",
   keywords: ["Software Engineer", "Machine Learning", "AI", "Python", "Go", "FastAPI", "Next.js"],
   authors: [{ name: "Amanuel Ayalew" }],
   creator: "Amanuel Ayalew",
@@ -39,8 +39,8 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange={false}
         >
           {children}

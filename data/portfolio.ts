@@ -19,6 +19,7 @@ export const portfolioData: PortfolioData = {
       company: "Exploree Solutions",
       position: "Software Engineer (Part-time)",
       duration: "July 2026 - Present",
+      location: "Addis Ababa · Remote",
       description: [
         "Developed job matching algorithms and integrated AI/ML capabilities into existing systems, focusing on intelligent matching, data processing, and automation"
       ],
@@ -29,6 +30,7 @@ export const portfolioData: PortfolioData = {
       company: "Gheero",
       position: "AI / ML Resident",
       duration: "August 2026 - September 2026",
+      location: "Addis Ababa · On-site",
       description: [
         "Worked on dynamic pricing models that adjusted prices based on demand and market conditions",
         "Applied reinforcement learning for Amharic tokenization"
@@ -40,6 +42,7 @@ export const portfolioData: PortfolioData = {
       company: "iCog Labs",
       position: "Machine Learning Engineer Intern",
       duration: "July 2025 - March 2026",
+      location: "Addis Ababa, Ethiopia · On-site",
       description: [
         "Conducted research on predictive coding–based transformer architectures as biologically inspired alternatives to backpropagation",
         "Worked on a tag recommendation model for the Mindplex platform, improving recommendation accuracy by 30% through evaluation of learning efficiency and model behavior",
@@ -52,6 +55,7 @@ export const portfolioData: PortfolioData = {
       company: "Alet Systems",
       position: "QA Engineer",
       duration: "May 2024 - December 2024",
+      location: "Addis Ababa, Ethiopia · Remote",
       description: [
         "Tested and validated backend APIs to ensure system reliability and performance",
         "Debugged and resolved production-level issues in backend systems, cutting response/resolution time by 40%",
@@ -62,6 +66,24 @@ export const portfolioData: PortfolioData = {
   ],
 
   projects: [
+    {
+      id: "sift",
+      title: "Sift — AI Lead Qualification SaaS",
+      description: "A multi-tenant AI agent that scores, enriches, and drafts replies to inbound leads in real time. Built with a NestJS and GraphQL backend, a FastAPI agent service, and a Next.js frontend on PostgreSQL, with Redis and BullMQ handling scoring and enrichment jobs.",
+      technologies: ["NestJS", "GraphQL", "FastAPI", "Next.js", "PostgreSQL", "Redis", "BullMQ"],
+      images: [
+        "/images/Sift1.png",
+        "/images/Sift2.png",
+        "/images/Sift3.png",
+        "/images/Sift4.png",
+        "/images/Sift5.png",
+        "/images/Sift6.png",
+        "/images/Sift7.png",
+        "/images/Sift8.png",
+        "/images/Sift9.png",
+        "/images/Sift10.png"
+      ]
+    },
     {
       id: "awaqi",
       title: "Awaqi — Bilingual AI Tax Assistant",
@@ -116,13 +138,6 @@ export const portfolioData: PortfolioData = {
       description: "An implementation of predictive coding networks — a biologically inspired alternative to backpropagation — trained on MNIST, with visualizations of prediction errors and training curves. Built with NGC-Learn.",
       technologies: ["Python", "NGC-Learn"],
       githubUrl: "https://github.com/Amanuel-Ayal3w/Predictive-coding-"
-    },
-    {
-      id: "etb-usd",
-      title: "ETB/USD Exchange Rate Prediction",
-      description: "A linear regression model that predicts the Ethiopian Birr to US Dollar exchange rate from historical data, developed and visualized in a Jupyter notebook.",
-      technologies: ["Python", "Jupyter", "scikit-learn"],
-      githubUrl: "https://github.com/Amanuel-Ayal3w/Predicting_Ethiopian_Birr_to_USD_Exchange_Rate_using_Linear_Regression-"
     }
   ],
 
