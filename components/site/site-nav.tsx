@@ -81,7 +81,7 @@ export function SiteNav() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="site-btn hidden border border-foreground px-3 py-2 font-mono text-[11px] uppercase tracking-[0.08em] sm:inline-flex sm:items-center sm:gap-2"
+              className="site-btn inline-flex items-center gap-1.5 border border-foreground px-2.5 py-2 font-mono text-[10px] uppercase tracking-[0.08em] sm:gap-2 sm:px-3 sm:text-[11px]"
             >
               Resume <span aria-hidden>↗</span>
             </a>
@@ -125,9 +125,9 @@ export function SiteNav() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-xs uppercase tracking-[0.08em]"
+              className="site-btn inline-flex w-fit items-center gap-2 border border-foreground px-3 py-2 font-mono text-[11px] uppercase tracking-[0.08em]"
             >
-              Resume ↗
+              Resume <span aria-hidden>↗</span>
             </a>
           </nav>
         )}
